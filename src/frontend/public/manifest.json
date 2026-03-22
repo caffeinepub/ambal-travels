@@ -1,0 +1,22 @@
+{
+  "name": "Ambal Travels",
+  "short_name": "Ambal Travels",
+  "description": "Book your car ride with Ambal Travels",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a0533",
+  "theme_color": "#f59e0b",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/assets/generated/ambal-travels-icon.dim_512x512.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/generated/ambal-travels-icon.dim_512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
