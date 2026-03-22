@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.625rem;
+    /* Yellow primary: #F2B705 → oklch(0.82 0.178 86) */
+    --primary: 0.82 0.178 86;
+    --primary-foreground: 0.14 0 0;
+    /* Background: white #FFFFFF */
+    --background: 1 0 0;
+    --foreground: 0.14 0 0;
+    /* Card: white */
+    --card: 1 0 0;
+    --card-foreground: 0.14 0 0;
+    --popover: 1 0 0;
+    --popover-foreground: 0.14 0 0;
+    /* Secondary: light gray #F5F6F8 */
+    --secondary: 0.97 0.004 240;
+    --secondary-foreground: 0.25 0 0;
+    /* Muted: #6B7280 */
+    --muted: 0.97 0.004 240;
+    --muted-foreground: 0.55 0.02 264;
+    /* Accent: yellow */
+    --accent: 0.82 0.178 86;
+    --accent-foreground: 0.14 0 0;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.9 0.005 240;
+    --input: 0.9 0.005 240;
+    --ring: 0.82 0.178 86;
+    --chart-1: 0.82 0.178 86;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+    --sidebar: 0.985 0 0;
+    --sidebar-foreground: 0.145 0 0;
+    --sidebar-primary: 0.82 0.178 86;
+    --sidebar-primary-foreground: 0.14 0 0;
+    --sidebar-accent: 0.97 0 0;
+    --sidebar-accent-foreground: 0.205 0 0;
+    --sidebar-border: 0.922 0 0;
+    --sidebar-ring: 0.82 0.178 86;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Plus Jakarta Sans", sans-serif;
+  }
+}
+
+@layer utilities {
+  .hero-gradient {
+    background: linear-gradient(
+      135deg,
+      #1a0533 0%,
+      #3b0a8a 18%,
+      #6d1fbd 34%,
+      #c0392b 50%,
+      #e8732a 65%,
+      #f2b705 80%,
+      #ff6b9d 100%
+    );
+  }
+  .hero-pattern {
+    background-image: radial-gradient(
+        circle at 15% 75%,
+        rgba(255, 107, 157, 0.35) 0%,
+        transparent 45%
+      ),
+      radial-gradient(
+        circle at 85% 20%,
+        rgba(109, 31, 189, 0.4) 0%,
+        transparent 45%
+      ),
+      radial-gradient(
+        circle at 50% 50%,
+        rgba(242, 183, 5, 0.2) 0%,
+        transparent 60%
+      ),
+      repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 60px,
+        rgba(255, 255, 255, 0.02) 60px,
+        rgba(255, 255, 255, 0.02) 61px
+      );
+  }
+  .text-brand-yellow {
+    color: #f2b705;
+  }
+  .bg-brand-yellow {
+    background-color: #f2b705;
+  }
+  .bg-brand-dark {
+    background-color: #111111;
+  }
+  .border-brand-yellow {
+    border-color: #f2b705;
+  }
+  .hover-lift {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  }
+}
